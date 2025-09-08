@@ -94,7 +94,7 @@ class Ticket(models.Model):
                     f"{self.movie_session.rows}]"
                 }
             )
-        if not(1 <= num_seat <= self.movie_session.cinema_hall.seats_in_row):
+        if not (1 <= num_seat <= self.movie_session.cinema_hall.seats_in_row):
             raise error_to_raise(
                 {
                     "seat": "seat must be in the range [1, "
